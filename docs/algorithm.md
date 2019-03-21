@@ -1,10 +1,27 @@
 # 算法阐述
 
-<figure class="thumbnails">
-    <img src="assets/img/theme-simple-cover.png" alt="Screenshot of coverpage" title="Cover page">
-    <img src="assets/img/theme-simple-content.png" alt="Screenshot of content" title="Content">
-</figure>
+传统方法和深度学习方法，传统方法传统方法是基于优化的方法，你前面说的sfm，sfs都是，非常非常多，推荐看一下这个最新的综述Zollhöfer M, Thies J, Garrido P, et al. State of the Art on Monocular 3D Face Reconstruction, Tracking, and Applications[C]//Computer Graphics Forum. 2018, 37(2): 523-550.
 
+以上方法都是不基于关键点等信息，仅仅基于单目图像的方法。这类方法的核心是blend shape模型，最常见的就是3DMM模型，也就是将三维的人脸按照shape，expression，texture等各个维度进行分离并降维表示，随后线性叠加表示三维模型，它要解决的就是要分别求取相关的参数，通常使用inverse rendering的思路，也就是从二维图像重建3维，然后从3维投影回2维计算误差。
+
+> 计算机处理人脸时，有时会依赖一种所谓的**3D Morphable Model(3DMMs)**。这一模型代表了一个平均人脸，但同时也包含了与这一平均值常见的偏差模式信息。
+>> 例如，如长了一个长鼻子的脸也可能有一个很长的下巴。
+> 鉴于这种相关性，计算机可以在不将有关你脸部全部表征信息都存储下来的情况下，只列出几百个数字描述你的脸与平均人脸的偏差，就能够生成专属于你的面部图像了。不仅如此，这些偏差还包括大致的年龄、性别和脸部长度等参数。
+
+- 但是，这样也有一个问题。因为世界上的人脸千变万化，要将所有人脸与平均人脸的偏差都存储下来，3DMM 需要集成许多面部的信息。目前为止所采用的方法是扫描大量人脸，然后人工仔细标记所有的特征。也因此，目前较好的模型也只是基于几百张人脸——大部分还都是白人，而且模型在模仿不同年龄和种族人脸方面的能力十分有限。
+
+| model | intro |
+| --- | --- |
+| BFM  | Basel.ac.uk |
+| SFM | Surrey.ac.uk |
+| LSFM | ... |
+
+
+> 3D Morphable Model(3DMMs)是三维人脸形状和纹理的有力统计模型，也是从单个图像重建面部形状的方法。
+
+- 3DMM由三个参数模型组成:形状、录像和纹理模型
+
+> 随着新的3D传感器的出现，许多三维人脸数据集已经被收集，既包括中性，也包含有表情的面孔。但是，所有数据集都是在受控条件下捕获的。因此，即使能从这些数据中学习到强大的3D人脸模型，也很难建立足够的统计纹理模型来重建在无约束条件下捕获的人脸(“in-the-wild”)。在本文中，我们通过结合一个强有力的面部形态的统计模型，将面部轮廓的特征和表达方式结合在一起，提出了一种“在野外”的3DMM，并采用了“In -the-wild”纹理模型。我们证明了这种“in-thewild”纹理模型的使用极大地简化了拟合过程，因为没有必要对光照参数进行优化。
 
 > 完成重建后，我们可获得人脸三维网格、模型在图像中的位置，以及当前人脸的形状特征参数和blendshape表情参数。
 

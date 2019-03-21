@@ -16,7 +16,11 @@
 
 
 
+> 从单个图像中提取三维面部形状的一般问题是一个病态的问题这是众所周知的难以解决的问题，没有使用任何统计先验的形状和纹理的脸。也就是说，如果不事先知道物体的形状，就会发现问题中存在固有的模糊性。
+  
+- 图像中位置的像素强度是物体的**基础形状**、**表面反射率**和**正常特征**、**相机参数**以及**场景照明**和其他物体的排列组合的结果。
 
+> 因此，对于这个问题，可能有无限的解决方案。
 
 ## Features
 
@@ -48,11 +52,3 @@
 - Follow [@jhildenbiddle](https://twitter.com/jhildenbiddle) for announcements
 - Add a ⭐️ [star on GitHub](https://github.com/jhildenbiddle/docsify-themeable) or ❤️ [tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,developers,frontend,javascript) to support the project!
 
-## License
-
-This project is licensed under the [MIT license](https://github.com/jhildenbiddle/docsify-themeable/blob/master/LICENSE).
-
-Copyright (c) John Hildenbiddle ([@jhildenbiddle](https://twitter.com/jhildenbiddle))
-
-<!-- GitHub Buttons -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
