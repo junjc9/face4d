@@ -30,7 +30,7 @@
 </figure>
 
 <figure class="thumbnails">
-    <img src="	https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/nucleus_segmentation.png" alt="Screenshot of content" title="Content">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/nucleus_segmentation.png" alt="Screenshot of content" title="Content">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/vertex_3d.jpg" alt="Screenshot of content" title="Content">
 </figure>
 

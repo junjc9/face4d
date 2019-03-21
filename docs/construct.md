@@ -52,6 +52,10 @@ S表示一张有着某人脸特征和某表情的脸部模型。
 
 - 这里采用弱透视投影。
 
+<figure class="thumbnails">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/model/camera.jpg" alt="Screenshot of content" title="Content">
+</figure>
+
 - 弱透视投影使用与正交投影相同的原则，但乘以一个缩放参数来实现近大远小的效果。可看作透视投影和正交投影的混合体
 
 > 重建算法的关键在于找出合适的参数 \{s, R, t, \vec a, \vec b, \vec w \} ，使三维人脸模型在平面的投影尽可能接近原图像。如果不考虑纹理，问题可简化为“使人脸模型关键点在平面上的投影与2d人脸关键点的位置尽可能接近”。
