@@ -1,11 +1,10 @@
-project(4dface)
+project(demo)
 cmake_minimum_required(VERSION 2.8.12)
-set(4dface_VERSION_MAJOR 0)
-set(4dface_VERSION_MINOR 3)
-set(4dface_VERSION_PATCH 0)
-set(4dface_VERSION ${4dface_VERSION_MAJOR}.${4dface_VERSION_MINOR}.${4dface_VERSION_PATCH})
+set(demo_VERSION_MAJOR 0)
+set(demo_VERSION_MINOR 3)
+set(demo_VERSION_PATCH 0)
+set(demo_VERSION ${demo_VERSION_MAJOR}.${demo_VERSION_MINOR}.${demo_VERSION_PATCH})
 
-# Check if a supported compiler is used and add c++14 flag:
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.9)
 		message(FATAL_ERROR "Need at least gcc 4.9 to compile.")
@@ -23,7 +22,7 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
 	endif()
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthreads")
-else() # no GNU, no MSVC, no Clang
+else() 
 	message(WARNING "You are using an unsupported compiler. Compilation has only been tested with MSVC, GCC and Clang.")
 	include(CheckCXXCompilerFlag)
 	check_cxx_compiler_flag(-std=c++14 HAS_CXX14_FLAG)
@@ -34,21 +33,18 @@ else() # no GNU, no MSVC, no Clang
 	endif()
 endif()
 
-# Build a CPack driven installer package:
-include(InstallRequiredSystemLibraries) # Includes any runtime libraries that are needed by the project for the current platform
+include(InstallRequiredSystemLibraries) 
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
-set(CPACK_PACKAGE_VERSION_MAJOR "${4dface_VERSION_MAJOR}")
-set(CPACK_PACKAGE_VERSION_MINOR "${4dface_VERSION_MINOR}")
-set(CPACK_PACKAGE_VERSION_PATCH "${4dface_VERSION_PATCH}")
+set(CPACK_PACKAGE_VERSION_MAJOR "${demo_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${demo_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${demo_VERSION_PATCH}")
 include(CPack)
 
-# Find dependencies:
 find_package(OpenCV 3 REQUIRED core imgcodecs imgproc highgui videoio objdetect)
 message(STATUS "OpenCV include dir found at ${OpenCV_INCLUDE_DIRS}")
 message(STATUS "OpenCV library dir found at ${OpenCV_LIB_DIR}")
 set_target_properties(${OpenCV_LIBS} PROPERTIES MAP_IMPORTED_CONFIG_RELWITHDEBINFO RELEASE)
 
-# Find the directory to OpenCV's face detector:
 if(NOT OpenCV_haarcascades_DIR)
 	# This will fail for system-packaged OpenCV
 	list(GET OpenCV_INCLUDE_DIRS 0 OpenCV_first_include_dir)
@@ -76,8 +72,8 @@ message(STATUS "Eigen3 found: ${EIGEN3_FOUND}")
 message(STATUS "Eigen3 include dir found at ${EIGEN3_INCLUDE_DIR}")
 message(STATUS "Eigen3 version: ${EIGEN3_VERSION}")
 
-# Paths to our own includes, inside the git submodules:
-set(eos_DIR "${CMAKE_SOURCE_DIR}/3rdparty/eos") # These are used later to gather the required data files
+
+set(eos_DIR "${CMAKE_SOURCE_DIR}/3rdparty/eos") 
 set(superviseddescent_DIR "${CMAKE_SOURCE_DIR}/3rdparty/superviseddescent")
 
 set(eos_INCLUDE_DIR "${eos_DIR}/include")
@@ -88,11 +84,6 @@ set(nanoflann_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/3rdparty/eos/3rdparty/nanoflann/i
 set(eigen3_nnls_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/3rdparty/eos/3rdparty/eigen3-nnls/src")
 set(toml11_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/3rdparty/eos/3rdparty/toml11")
 
-# The new model is not in the repository, download it manually for now:
-#
-
-
-# Add header includes:
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(${EIGEN3_INCLUDE_DIR})
@@ -104,11 +95,11 @@ include_directories(${nanoflann_INCLUDE_DIR})
 include_directories(${eigen3_nnls_INCLUDE_DIR})
 include_directories(${toml11_INCLUDE_DIR})
 
-add_executable(4dface 4dface.cpp helpers.hpp)
-target_link_libraries(4dface ${OpenCV_LIBS} ${Boost_LIBRARIES})
+add_executable(demo demo.cpp helpers.hpp)
+target_link_libraries(demo ${OpenCV_LIBS} ${Boost_LIBRARIES})
 
 # install targets:
-install(TARGETS 4dface DESTINATION bin)
+install(TARGETS demo DESTINATION bin)
 install(FILES ${eos_DIR}/share/sfm_shape_3448.bin DESTINATION share)
 install(FILES ${eos_DIR}/share/ibug_to_sfm.txt DESTINATION share)
 install(FILES ${eos_DIR}/share/sfm_model_contours.json DESTINATION share)
