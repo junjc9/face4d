@@ -35,4 +35,5 @@
 
 <figure class="thumbnails">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/687474703a2f2f636f6d612e69732e7475652e6d70672e64652f6173736574732f636f6d615f66616365732e6a7067.jpeg" alt="Screenshot of coverpage" title="Cover page">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/pano.gif" alt="Screenshot of coverpage" title="Cover page">
 </figure>

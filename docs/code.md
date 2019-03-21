@@ -29,7 +29,6 @@ inline std::pair<core::Mesh, fitting::RenderingParameters> fit_shape_and_pose(
 ## 模型渲染并绘制窗口
 
 ```cpp
-		// Render the model in a separate window using the estimated pose, shape and merged texture:
 		core::Image4u rendering;
 		auto modelview_no_translation = rendering_params.get_modelview();
 		modelview_no_translation[3][0] = 0;
