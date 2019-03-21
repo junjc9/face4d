@@ -1,9 +1,6 @@
 [submodule "3rdparty/eos"]
 	path = 3rdparty/eos
 	url = https://github.com/patrikhuber/eos.git
-[submodule "3rdparty/libigl"]
-	path = 3rdparty/libigl
-	url = https://github.com/libigl/libigl.git
 [submodule "3rdparty/superviseddescent"]
 	path = 3rdparty/superviseddescent
 	url = https://github.com/patrikhuber/superviseddescent.git
