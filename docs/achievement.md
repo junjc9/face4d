@@ -1,12 +1,10 @@
 # 当前成果
 
-!> **Important** BEAFORE BROWSER THIS PAGE YOU MUST UNDER OUR LICENSE,DO NOT **COPY**, **SAVE**,**SHARE**,**DISTRIBUTE**,**MODIFY** `THE FOLLOWING IMAGES` BEYOND THE LEGAL PERMISSION!
 
-!> **Important** notice with `inline code` and additional placeholder text used
-to force the content to wrap and span multiple lines.
+!> **Warning:** BEFORE BROWSER THIS PAGE YOU MUST UNDER OUR LICENSE,DO NOT **COPY**, **SAVE**,**SHARE**,**DISTRIBUTE**,**MODIFY** `THE FOLLOWING IMAGES` BEYOND GIVING PERMISSION!
 
-?> **Tip** notice with `inline code` and additional placeholder text used to
-force the content to wrap and span multiple lines.
+!> **警告:** 在浏览此页图像之前您必须遵守我们的许可, 在提交申请之前不要复制、保存、共享、分销、修改!
+
 
 ## 标定
 
@@ -46,3 +44,4 @@ force the content to wrap and span multiple lines.
 <figure class="thumbnails">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/demo.gif" alt="Screenshot of coverpage" title="Cover page">
 </figure>
+
