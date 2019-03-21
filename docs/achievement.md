@@ -1,8 +1,12 @@
 # 当前成果
 
-## NOTICE ** Rendered **
-
 !> **Important** BEAFORE BROWSER THIS PAGE YOU MUST UNDER OUR LICENSE,DO NOT **COPY**, **SAVE**,**SHARE**,**DISTRIBUTE**,**MODIFY** `THE FOLLOWING IMAGES` BEYOND THE LEGAL PERMISSION!
+
+!> **Important** notice with `inline code` and additional placeholder text used
+to force the content to wrap and span multiple lines.
+
+?> **Tip** notice with `inline code` and additional placeholder text used to
+force the content to wrap and span multiple lines.
 
 ## 标定
 
