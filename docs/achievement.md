@@ -18,8 +18,6 @@
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/mark/1.jpg" alt="Screenshot of content" title="Content">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/mark/2.jpg" alt="Screenshot of content" title="Content">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/mark/3.jpg" alt="Screenshot of content" title="Content">
-    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/base_model.jpg"
-    alt="Screenshot of content" title="Content">
 </figure>
 
 <br>
