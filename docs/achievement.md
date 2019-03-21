@@ -22,8 +22,21 @@
 
 <br>
 <br>
-<br>
-<br>
+
+## 3D Morphable Model
+
+<figure class="thumbnails">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/model/1.png" alt="Screenshot of content" title="Content">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/model/2.png" alt="Screenshot of content" title="Content">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/model/3.png" alt="Screenshot of content" title="Content">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/model/4.png" alt="Screenshot of content" title="Content">
+</figure>
+
+
+<figure class="thumbnails">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/model/ff.gif" alt="Screenshot of content" title="Content">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/model/random.gif" alt="Screenshot of content" title="Content">
+</figure>
 
 ## 跟踪与重建
 
@@ -35,6 +48,8 @@
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/track/1.jpg" alt="Screenshot of coverpage" title="Cover page">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/track/2.jpg" alt="Screenshot of content" title="Content">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/track/3.jpg" alt="Screenshot of content" title="Content">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/model/5.png" alt="Screenshot of content" title="Content">
+    
 </figure>
 
 ### 面部三维重建
