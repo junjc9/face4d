@@ -12,6 +12,8 @@
 
 > 实时检测1至多个人脸，返回每个人脸的106个关键点，在侧脸、暗光等极限环境下算法鲁棒，耗时最少，适用于贴纸、美颜、安防等场景
 
+?> **注意:** 人脸关键点检测结果一般是二维点。也就是说，脸的朝向不同，检测到的脸部边缘点也会不一样，2d人脸边缘点并不在真正的脸颊边缘线上
+
 <figure class="thumbnails">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/mark/1.jpg" alt="Screenshot of content" title="Content">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/mark/2.jpg" alt="Screenshot of content" title="Content">
@@ -20,6 +22,10 @@
     alt="Screenshot of content" title="Content">
 </figure>
 
+<br>
+<br>
+<br>
+<br>
 
 ## 跟踪与重建
 

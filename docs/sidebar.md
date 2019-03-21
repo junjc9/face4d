@@ -1,7 +1,7 @@
 - [简介](introduction)
 - [效果](achievement)
 - [应用](app)
-- [开发流程](flow)
+- [重建](construct)
 - [算法](algorithm)
 - [历史](history)
 - [代码](code)
@@ -14,5 +14,5 @@
 
 
 - **快速链接**
-- [blog](http://blog.junjc9.com)
+- [blog](http://dev.junjc9.com)
 
