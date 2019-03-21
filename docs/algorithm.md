@@ -1,9 +1,5 @@
 # 算法阐述
 
-传统方法和深度学习方法，传统方法传统方法是基于优化的方法，你前面说的sfm，sfs都是，非常非常多，推荐看一下这个最新的综述Zollhöfer M, Thies J, Garrido P, et al. State of the Art on Monocular 3D Face Reconstruction, Tracking, and Applications[C]//Computer Graphics Forum. 2018, 37(2): 523-550.
-
-以上方法都是不基于关键点等信息，仅仅基于单目图像的方法。这类方法的核心是blend shape模型，最常见的就是3DMM模型，也就是将三维的人脸按照shape，expression，texture等各个维度进行分离并降维表示，随后线性叠加表示三维模型，它要解决的就是要分别求取相关的参数，通常使用inverse rendering的思路，也就是从二维图像重建3维，然后从3维投影回2维计算误差。
-
 > 计算机处理人脸时，有时会依赖一种所谓的**3D Morphable Model(3DMMs)**。这一模型代表了一个平均人脸，但同时也包含了与这一平均值常见的偏差模式信息。
 >> 例如，如长了一个长鼻子的脸也可能有一个很长的下巴。
 > 鉴于这种相关性，计算机可以在不将有关你脸部全部表征信息都存储下来的情况下，只列出几百个数字描述你的脸与平均人脸的偏差，就能够生成专属于你的面部图像了。不仅如此，这些偏差还包括大致的年龄、性别和脸部长度等参数。
@@ -26,3 +22,14 @@
 > 完成重建后，我们可获得人脸三维网格、模型在图像中的位置，以及当前人脸的形状特征参数和blendshape表情参数。
 
 > 基于以上信息，可以实现各种有意思的效果，下面根据这几组参数分别举一些例子。
+
+> 3DMM模型，也就是将三维的人脸按照shape，expression，texture等各个维度进行分离并降维表示，随后线性叠加表示三维模型，它要解决的就是要分别求取相关的参数，通常使用inverse rendering的思路，也就是从二维图像重建3维，然后从3维投影回2维计算误差。
+
+<figure class="thumbnails">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/shape.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+<figure class="thumbnails">
+    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/graph_run%3D.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
