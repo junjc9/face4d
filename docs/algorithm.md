@@ -33,3 +33,8 @@
 <figure class="thumbnails">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/graph_run%3D.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
+
+
+- PCA的核心思想是在进行投影之后尽量多的保留原始数据的主要信息，降低数据的冗余信息，以利于后续的识别。LDA的核心思想是最大化类间差异，最小化类内差异，即保证同一个人的不同人脸图像在投影之后聚集在一起，不同人的人脸图像在投影之后被用一个大的间距分开。
+
+- PCA和LDA最后都归结于求解矩阵的特征值和特征向量，这有成熟的数值算法可以实现。PCA和LDA都是线性降维技术，但人脸在高维空间中的分布显然是非线性的，因此可以使用非线性降维算法，典型的代表是流形学习和核（kernel）技术。
