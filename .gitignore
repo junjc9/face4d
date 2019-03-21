@@ -1,0 +1,31 @@
+#execute file
+*.exe
+*.app
+
+
+#office file
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+
+*.pdf
+
+#dynamic link library
+*.so
+*.dll
+*.dylib
+
+# configuration files with user-specific paths:
+initial_cache.cmake
+
+# static resource
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tiff
+*.mp4
+*.gif
