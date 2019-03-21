@@ -3,7 +3,6 @@
 - [应用](app)
 - [重建](construct)
 - [算法](algorithm)
-- [历史](history)
 - [代码](code)
 - [构建](build)
 - [问题](problem)
