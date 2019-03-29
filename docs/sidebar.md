@@ -12,6 +12,3 @@
 - [结语](end)
 
 
-- **快速链接**
-- [blog](http://dev.junjc9.com)
-

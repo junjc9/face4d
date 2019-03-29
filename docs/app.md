@@ -25,11 +25,6 @@
 ## 医学领域
 
 <figure class="thumbnails">
-    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/project_usiigaci1.gif" alt="Screenshot of coverpage" title="Cover page">
-    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/project_usiigaci2.gif" alt="Screenshot of content" title="Content">
-</figure>
-
-<figure class="thumbnails">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/nucleus_segmentation.png" alt="Screenshot of content" title="Content">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/vertex_3d.jpg" alt="Screenshot of content" title="Content">
 </figure>
@@ -38,7 +33,6 @@
 
 <figure class="thumbnails">
     <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/gif/street.png" alt="Screenshot of coverpage" title="Cover page">
-    <img src="https://blog-1253739411.cos.ap-shanghai.myqcloud.com/static/img/bandicam/4k_video.gif" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 影视特效
