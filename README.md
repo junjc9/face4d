@@ -1,11 +1,74 @@
-# f4d 人脸重建
 
+<img src="docs/img/f4.png" align="center" width="400"></img>
+
+
+<h1 align="center">f4d:基于三维可形变模型的实时面部跟踪与重建</h1>
 
 ![](https://img.shields.io/badge/opencv-tensorflow-ff69b4.svg)
 ![](https://img.shields.io/badge/android-f4d-0f9d58.svg)
 ![](https://img.shields.io/badge/license-Apache2.0-253bd8.svg)
 
 ## docs
+
+
+![](docs/img/2.png)
+
+![](docs/img/3.png)
+
+<table>
+  <tr>
+    <td vlign="center">
+        <img src="docs/img/6.png" width="250" alt="">
+    </td>
+    <td vlign="center">
+        <img src="docs/img/7.png" width="250" alt="">
+    </td>
+    <td vlign="center">
+        <img src="docs/img/9.png" width="250" alt="">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td vlign="center">
+        <img src="docs/img/10.png" width="250" alt="">
+    </td>
+    <td vlign="center">
+        <img src="docs/img/11.png" width="250" alt="">
+    </td>
+    <td vlign="center">
+        <img src="docs/img/12.png" width="250" alt="">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td vlign="center">
+        <img src="docs/img/14.png" width="400" alt="">
+    </td>
+    <td vlign="center">
+        <img src="docs/img/15.png" width="200" alt="">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td vlign="center">
+        <img src="docs/img/16.png" width="250" alt="">
+    </td>
+    <td vlign="center">
+        <img src="docs/img/18.png" width="250" alt="">
+    </td>
+    <td vlign="center">
+        <img src="docs/img/19.png" width="250" alt="">
+    </td>
+  </tr>
+</table>
+
+![](docs/img/art.png)
 
 [face4d](https://dev.junjc9.com/face4d)
 
