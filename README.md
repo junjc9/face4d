@@ -8,13 +8,13 @@
 ![](https://img.shields.io/badge/android-f4d-0f9d58.svg)
 ![](https://img.shields.io/badge/license-Apache2.0-253bd8.svg)
 
-## docs
+## demo
 
-![](docs/img/1.jpg)
+![](docs/img/f4/12.jpg)
 
-![](docs/img/2.jpg)
+![](docs/img/f4/13.jpg)
 
-![](docs/img/3.jpg)
+![](docs/img/f4/14.jpg)
 
 <!-- <table>
   <tr>
@@ -68,8 +68,6 @@
     </td>
   </tr>
 </table> -->
-
-[face4d](https://dev.junjc9.com/face4d)
 
 ## License 许可
 
