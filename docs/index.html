@@ -1,90 +1,562 @@
 <!doctype html>
-<html lang="en">
-
-<head>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-    <meta name="description" content="A delightfully simple theme system for docsify.js. Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE10+).">
-    <!--meta name="google-site-verification" content="_EWJaM8G6xwMtEqemO4yN8WqSU2CaKVi3jTj0gLg48E"-->
-    <title>face4D:--:Realtime face reconstruction based on LSFM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/theme-simple.css" title="Simple">
-    <link rel="stylesheet" href="assets/css/theme-simple-dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
 
-    <!-- Alternate Stylesheets -->
-    <link rel="stylesheet alternate" href="assets/css/theme-defaults.css" title="Defaults">
-    <link rel="stylesheet alternate" href="assets/css/theme-simple-dark.css" title="Simple Dark">
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
 
-    <!-- Test Stylesheets -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/buble.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/dark.css"> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/pure.css"> -->
-</head>
+      Thanks,
+      @jlantunez.
+    -->
 
-<body>
-    <div id="app"></div>
+    <!-- SEO -->
+    <title>WebSlides: Making HTML presentations easy</title>
+    <meta name="description" content="WebSlides is the easiest way to make HTML presentations, portfolios, and landings. Just essential features.">
 
-    <!-- JavaScript -->
-    <!--script src="https://browser.sentry-cdn.com/4.4.2/bundle.min.js" crossorigin="anonymous"></script-->
-    <script>
-        // Sentry.io
-        //Sentry.init({ dsn: 'https://60f8b01c2f0b461a87e5c48f88778039@sentry.io/1367220' });
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/"> -->
 
-        // Docsify
-        window.$docsify = {
-            // GENERAL
-            // -----------------------------------------------------------------
-            name       : 'face4D',
-            repo       : 'https://github.com/junjc9/f4d',
-            coverpage  : 'coverpage.md',
-            homepage   : 'introduction.md',
-            loadSidebar: 'sidebar.md',
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
 
-            // NAVIGATION
-            // -----------------------------------------------------------------
-            alias: {
-                '.*?/': 'introduction.md',
-            },
-            auto2top   : true,
-            maxLevel   : 3,
-            subMaxLevel: 3,
+    <!-- CSS WebSlides -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
 
-            // PLUGINS
-            // -----------------------------------------------------------------
-            executeScript: true,
-            //ga    : 'UA-100100910-3',
-            search: {
-                depth      : 3,
-                noData     : 'No results!',
-                placeholder: 'Search...'
-            }
-        };
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://your-url.com/"> <!-- YOUR URL -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta property="og:description" content="WebSlides is about telling stories beautifully. Just the essential features. Good karma."> <!-- EDIT -->
+    <meta property="og:updated_time" content="2017-01-04T17:20:50"> <!-- EDIT -->
+    <meta property="og:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta name="twitter:description" content="WebSlides is about good karma. Just essential features. 120+ free slides ready to use."> <!-- EDIT -->
+    <meta name="twitter:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+        }
+      });
     </script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/docsify-copy-code@2.js"></script>
-    <script src="assets/js/docsify-pagination.min.js"></script>
-    <script src="assets/js/docsify-tabs@1.js"></script>
-    <script src="assets/js/docsify-themeable@0.js"></script>
-    <script src="assets/js/docsify@4.js"></script>
-    <script src="assets/js/external-script.min.js"></script>
-    <script src="assets/js/prism-bash.min.js"></script>
-    <script src="assets/js/search.js"></script>
-    <script src="assets/js/zoom-image.min.js"></script>
-    <!--script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script-->
 
-</body>
+  </head>
+  <body>
+    <main role="main">
+      <article id="webslides" class="vertical">
+        <section class="bg-primary">
+          <div class="wrap">
+            <span><a href="https://dev.junjc9.com/face4d"><img class=" aligncenter size-50" src="img/f4.png" alt="f4"></a></span>
+          </div>
+            <footer class="bg-secondary">
+            <!--.wrap o <nav> = container 1200px -->
+            <div class="wrap">
+              <p>
+                <span class="alignleft"><img src="img/by-nc-nd.png" alt="cc">&nbspPowered by <a href="https://dev.junjc9.com">FACE4D</a>.</span>
+
+                <span class="alignright">
+                  <a href="#" title="copyright">
+                    &copy junjc9
+                  </a>Dec 1st, 2018.
+                </span>
+              </p>
+            </div>
+          </footer>
+          <!-- .end .wrap -->
+        </section>
+
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/02.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+          <section class="bg-black-blue">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <blockquote class="text-quote">
+              <p>A key goal of computer vision is to recover the underlying 3D structure from 2D observations of the world.</p>
+              <p><cite><a href="https://arxiv.org/abs/1607.00662">Danilo Jimenez Rezende</a>.</cite></p>
+            </blockquote>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+<!--           <section class="fullscreen">
+          <div class="card-50">
+            <figure>
+              <img src="https://source.unsplash.com/2QHEC81Dt0c/" alt="Áqaba, Jordan">
+              <figcaption>
+                <a href="https://unsplash.com/@dburka" title="Daniel Burka">
+                  <svg class="fa-camera">
+                    <use xlink:href="#fa-camera"></use>
+                  </svg>
+                  Daniel Burka (Unsplash)
+                </a>
+              </figcaption>
+            </figure>
+             end figure
+            <div class="flex-content">
+              <h2>Discover Jordan
+              </h2>
+              <p>.fullscreen > .card-50</p>
+              <p class="text-intro">Aqaba is the only coastal city in Jordan and the largest and most populous city on the Gulf of Aqaba.</p>
+              <p class="aligncenter"><a class="button" href="https://en.wikipedia.org/wiki/Aqaba">Read more &raquo;</a></p>
+            </div>
+          </div>
+        </section> -->
+
+        <section class="bg-gradient-h aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/04.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="frame bg-gradient-v">
+          <div class="wrap">
+            <div class="cta">
+              <div class="number">
+                <p><span><sup>$</sup>1</span></p>
+              </div>
+              <!--end .number -->
+              <div class="benefit">
+                <h1>简介</h1>
+                <!-- <p>.frame.bg-red</p> -->
+              </div>
+              <!--end .benefit -->
+            </div>
+            <!--end .cta -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/06.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/07.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/08.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/09.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/10.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/11.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/14.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/15.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/16.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="frame bg-gradient-v">
+          <div class="wrap">
+            <div class="cta">
+              <div class="number">
+                <p><span><sup>$</sup>2</span></p>
+              </div>
+              <!--end .number -->
+              <div class="benefit">
+                <h1>算法</h1>
+                <!-- <p>.frame.bg-red</p> -->
+              </div>
+              <!--end .benefit -->
+            </div>
+            <!--end .cta -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1>2.1. &nbsp 主成分分析</h1>
+            <h1>(Principal Component Analysis,&nbsp PCA)</h1>
+            <!-- $$cov(X,Y)=E((X-\mu)(Y-\nu)^{T}) $$ -->
+          </div>
+        </section>
+
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/19.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/20.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/21.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/22.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1>2.2. &nbsp 面部检测</h1>
+            <h1>(Haar-like + Adaboost + Cascade classifier)</h1>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/24.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/25.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1>2.3. &nbsp 非线性最小二乘法</h1>
+            <h1>(Non-linear least squares)</h1>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/27.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/28.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-trans-dark aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/29.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/30.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/32.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="frame bg-gradient-v">
+          <div class="wrap">
+            <div class="cta">
+              <div class="number">
+                <p><span><sup>$</sup>3</span></p>
+              </div>
+              <!--end .number -->
+              <div class="benefit">
+                <h1>分析</h1>
+                <!-- <p>.frame.bg-red</p> -->
+              </div>
+              <!--end .benefit -->
+            </div>
+            <!--end .cta -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h1>3.1. &nbsp 性能分析</h1>
+            <div class="grid vertical-align">
+              <div class="zoomIn column">
+                <figure>
+                  <img src="img/f4/34.png" alt="Pixel Phone">
+                </figure>
+              </div>
+              <!-- end .column-->
+              <div class="zoomIn column">
+                <figure>
+                  <img src="img/f4/33.png" alt="Pixel Phone">
+                </figure>
+                <hr>
+                <figure>
+                  <img src="img/f4/35.png" alt="Pixel Phone">
+                </figure>
+              </div>
+              <!-- end figure-->
+            </div>
+            <!-- end .grid-->
+          </div>
+          <!-- end .wrap-->
+        </section>
+
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/36.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-black aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/37.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/38.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+          <section class="frame bg-gradient-h">
+          <div class="wrap">
+            <div class="cta">
+              <div class="number">
+                <p><span><sup>$</sup>4</span></p>
+              </div>
+              <!--end .number -->
+              <div class="benefit">
+                <h1>应用</h1>
+                <!-- <p>.frame.bg-red</p> -->
+              </div>
+              <!--end .benefit -->
+            </div>
+            <!--end .cta -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-white zoomIn aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/40.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white slideInRight aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/41.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white slideInLeft aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/42.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-white slideInRight aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/43.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-white zoomIn aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/44.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="frame bg-gradient-r">
+          <div class="wrap">
+            <div class="cta">
+              <div class="number">
+                <p><span><sup>$</sup>5</span></p>
+              </div>
+              <!--end .number -->
+              <div class="benefit">
+                <h1>总结</h1>
+                <!-- <p>.frame.bg-red</p> -->
+              </div>
+              <!--end .benefit -->
+            </div>
+            <!--end .cta -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/46.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/47.png" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-white zoomIn aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1><img src="img/f4/48.jpg" alt="Apple Logo"></h1>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="bg-secondary aligncenter">
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1 class="text-landing"><strong>The END</strong></h1>
+            <hr>
+            <h1>Thanks for watching!</h1>
+          </div>
+        </section>
+
+      </article>
+      <!-- end article -->
+    </main>
+    <!-- end main -->
+
+   <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
 </html>
