@@ -21,11 +21,3 @@
 # configuration files with user-specific paths:
 initial_cache.cmake
 
-# static resource
-*.png
-*.jpg
-*.jpeg
-*.bmp
-*.tiff
-*.mp4
-*.gif
