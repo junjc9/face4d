@@ -10,12 +10,13 @@
 
 ## docs
 
+![](docs/img/1.jpg)
 
-![](docs/img/2.png)
+![](docs/img/2.jpg)
 
-![](docs/img/3.png)
+![](docs/img/3.jpg)
 
-<table>
+<!-- <table>
   <tr>
     <td vlign="center">
         <img src="docs/img/6.png" width="250" alt="">
@@ -66,9 +67,7 @@
         <img src="docs/img/19.png" width="250" alt="">
     </td>
   </tr>
-</table>
-
-![](docs/img/art.png)
+</table> -->
 
 [face4d](https://dev.junjc9.com/face4d)
 
