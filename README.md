@@ -8,7 +8,13 @@
 ![](https://img.shields.io/badge/android-f4d-0f9d58.svg)
 ![](https://img.shields.io/badge/license-Apache2.0-253bd8.svg)
 
-## demo
+
+## Brief introduction
+
+使用opencv的haar特征级联分类器配合dlib对摄像头采集的视频帧进行面部对齐，
+采用非线性最小二乘法求解面部五官轮廓标定的 68 个关键点与三维形变模型的 68 个关键点在平面上的投影间距离相差最小的系数，不断迭代求出最优解即完成对面部的实时重建（忽略帧间稳定性和前后人脸一致性），最后使用pytorch的预训练模型对等距映射的面部纹理图片进行快速风格迁移，可封装用于视频特效。
+
+## Demo preview
 
 ![](docs/img/f4/12.jpg)
 
