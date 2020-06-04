@@ -8,27 +8,10 @@
 ![](https://img.shields.io/badge/android-f4d-0f9d58.svg)
 ![](https://img.shields.io/badge/license-Apache2.0-253bd8.svg)
 
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-    }
-  });
-</script>
 
 ## Brief introduction
 
-使用opencv的haar特征级联分类器配合dlib对摄像头采集的视频帧进行面部对齐，
-采用非线性最小二乘法求解面部五官轮廓标定的 68 个关键点与三维形变模型的 68 个关键点在平面上的投影间距离相差最小的系数，不断迭代求出最优解即完成对面部的实时重建（忽略帧间稳定性和前后人脸一致性），最后使用pytorch的预训练模型对等距映射的面部纹理图片进行快速风格迁移，可封装用于视频特效。
-
-- CPU: 10 fps
-- sfm\_3448 \& resnet \& haarcascade\_frontalface
-- core fumula:
-$$\arg\min\| (s*P*R*(\mathop{S}^{-}+\sum_{i=0}^{m-1} \alpha_{i}s_{i}+\sum_{i=0}^{n-1} \beta_{i}e_{i})+t_{2d})_{i_{3d}}-X_{i_{2d}}\|^{2}+\lambda\sum_{i}(\frac{\gamma_{i}}{\delta})^{2}.$$
-
+---
 
 ## Demo preview
 
